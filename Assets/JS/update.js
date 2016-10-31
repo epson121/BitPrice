@@ -14,15 +14,12 @@ function getprices() {
     var outputCurrency = document.getElementById('outputCurrency');
     var outputText = outputCurrency.textContent;
     var outputLowerCase = outputText.toLowerCase();
-    
+
     $.get('/api/' + inputLowerCase + '/' + outputLowerCase + '.php', function(data) {
         global.prices = data;
     });
     
-setInterval(reload(), 1000)
-
-
-
+    setInterval(reload, 5000)
 }
 
 function firstload() {

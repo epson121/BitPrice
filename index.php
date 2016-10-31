@@ -40,8 +40,8 @@
     <div class="text" id="outputCurrency">USD</div>
     <i class="dropdown icon"></i>
     <div class="menu">
-      <div class="item" onmouseup="getprices()">USD</div>
-      <div class="item" onmouseup="getprices()">EUR</div>
+      <div class="item">USD</div>
+      <div class="item">EUR</div>
       <div class="item">GBP</div>
     </div>
   </div>
@@ -52,7 +52,9 @@
     
 <script>
 $('.ui.search.dropdown.label')
-  .dropdown()
+  .dropdown({
+    onChange: getprices
+  })
 ;
 </script>
 </body>
